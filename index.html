@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoobert</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #00f7ff, #b400ff);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Answer Giver</h1>
+    <p>Click the button below for the answer.</p>
+    <button onclick="buttonBother()">Click Me</button>
+  </div>
+  <script>
+    let thing = 0;
+
+    function buttonBother() {
+        thing++;
+        let message;
+
+        if (thing === 1) {
+            message = "It's not that easy.";
+        } else if (thing === 2) {
+            message = "Still trying?";
+        } else if (thing === 3) {
+            message = "You really want that answer, huh?";
+        } else if (thing === 4) {
+            message = "Fine. Click Again To Get The Answer";
+        } else if (thing === 5) {
+            message = "Fine. Just kidding. Not yet.";
+        } else if (thing === 6) {
+            message = "Your Starting Top Annoy Me";
+        } else if (thing === 7) {
+            message = "Just Give Up"
+        } else if (thing === 8) {
+            message = "I Give Up"
+        } else if (thing === 9) {
+            message = "Click Another 10 Times"
+        } else if (thing > 9 & thing < 20) {
+            message = "Keep Clicking"
+        } else if (thing >= 20) {
+            message = "Fine! The answer is 53535420496e63"
+        }
+
+        alert(message);
+    }
+  </script>
+</body>
+</html>
